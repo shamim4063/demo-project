@@ -1,17 +1,43 @@
-<h3>Project Detail Informations</h3>
+<div class="bottom_nav"></div> 
+<div class="position-relative">
 
-<ul>
-  <li>
-    <a [routerLink]="['detail']">Projects</a>
-  </li>
-  <li>
-    <a [routerLink]="['sales']">Sales</a>
-  </li>
-  <li>
-    <a [routerLink]="['heating-design']">Heating Design</a>
-  </li>
-</ul>
 
-<div>
+<div class="row mt-2">
+  <div class="col-6"> 
+    <div class="card">
+      <div class="card-header">
+        Featured
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Special title treatment</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+
+    <ul>
+      <li>
+        <a [routerLink]="['detail']">Projects</a>
+      </li>
+      <li>
+        <a [routerLink]="['sales']">Sales</a>
+      </li>
+      <li>
+        <a [routerLink]="['heating-design']">Heating Design</a>
+      </li>
+    </ul>
+  </div>
+  <!-- <div class="col-6">
+      <div class="card">
+        Right side works
+        <router-outlet></router-outlet>
+      </div>
+  </div> -->
+</div>
+
+<div class="change-section">
   <router-outlet></router-outlet>
 </div>
+</div>
+
+

@@ -1,15 +1,15 @@
 <h3>Project Tab Content</h3>
 <ul>
-  <li>
-    Items 1
+  <li >
+    <a [routerLink]="['summary']">Summary</a>
   </li>
   <li>
-    Items 2
+    <a [routerLink]="['ber-details']">BER Details</a>
   </li>
   <li>
-    Items 3
+    <a [routerLink]="['building']">Building</a>
   </li>
 </ul>
-<div>
+<div class="right-side col-6">
   <router-outlet></router-outlet>
 </div>
