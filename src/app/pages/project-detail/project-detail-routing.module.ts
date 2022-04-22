@@ -8,8 +8,8 @@ const routes: Routes = [
     children: [
       { path: '', redirectTo: 'project-tab', pathMatch: 'full' },
       { path: 'project-tab', loadChildren: () => import('./project-tab/project-tab.module').then(m => m.ProjectTabModule) },
-      { path: 'sales-tab', loadChildren: () => import('./sales-tab/sales-tab.module').then(m => m.SalesTabModule) },
-      { path: 'heating-design-tab', loadChildren: () => import('./heating-design-tab/heating-design-tab.module').then(m => m.HeatingDesignTabModule) },
+      { path: 'sales', loadChildren: () => import('./sales-tab/sales-tab.module').then(m => m.SalesTabModule) },
+      { path: 'heating-design', loadChildren: () => import('./heating-design-tab/heating-design-tab.module').then(m => m.HeatingDesignTabModule) },
     ]
   },
 ];
