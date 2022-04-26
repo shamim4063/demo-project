@@ -1,0 +1,98 @@
+.top-header{
+    background: #204971;
+    padding: 5px 30px 3px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    .navbar-nav{
+        flex-direction: row;
+        align-items: center;
+        li {
+            display: inline-block;
+            padding-left: 22px;
+            &:first-child{
+                padding-left: 0;
+            }
+            a{
+                svg{
+                    fill: #fff;
+                }
+            }
+        }
+    }
+}
+.header-area{
+    background: #204971;
+    padding: 0 30px;
+    padding-top: 17px;
+    z-index: 999;
+    ul{
+        
+        li {
+            display: inline-block; 
+            a{
+                font-weight: 500;
+                font-size: 21px;
+                color: #fff;
+                padding: 14px 30px;
+                display: flex;
+                align-items: center;
+                border-radius: 25px 25px 0 0;
+                svg{
+                    fill: #fff;
+                    margin-right: 13px;
+                }
+                &:hover, &.active{
+                    background: #fff;
+                    color: #444;
+                    svg{
+                        fill: #444;
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width: 991px){
+    .header-area{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 0;
+        background: #fff;
+        padding: 5px;
+        ul{
+            display: flex;
+            justify-content: space-around;
+            li{
+                flex: 1 0 0%;
+                a{
+                    color: #204971;
+                    text-align: center;
+                    display: block;
+                    text-align: center;
+                    padding: 10px;
+                    font-size: 10px;
+                    svg{
+                        fill: #204971;
+                        display: block;
+                        margin: 0 auto;
+                        margin-bottom: 5px;
+                    }
+                    &.active{
+                        background: #204971;
+                        border-radius: 5px;
+                        color: #fff;
+                        svg{
+                            fill: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width: 575px){
+    .top-header{
+        padding: 5px 15px 3px;
+    }
+}

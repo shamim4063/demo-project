@@ -1,15 +1,21 @@
-<h3>Project Tab Content</h3>
-<ul>
-  <li >
-    <a [routerLink]="['summary']">Summary</a>
-  </li>
-  <li>
-    <a [routerLink]="['ber-details']">BER Details</a>
-  </li>
-  <li>
-    <a [routerLink]="['building']">Building</a>
-  </li>
-</ul>
-<div class="right-side col-6">
-  <router-outlet></router-outlet>
+<div class="accordion accordion-inner">
+	<div class="accordion-item"> 
+		<h5 class="title collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOne"> Project Details <i class="fa-solid fa-angle-up"></i> </h5>
+		<div id="collapseOne" class="accordion-collapse collapse"  data-bs-parent=".accordionExample"> 
+			<ul class="tab-list">
+				<li>
+					<a class="active" [routerLink]="['summary']">Summary</a>
+				</li>
+				<li>
+					<a [routerLink]="['ber-details']">BER Details</a>
+				</li>
+				<li>
+					<a [routerLink]="['building']">Building</a>
+				</li>
+			</ul>
+		</div>
+	</div>
 </div>
+<div class="right-side col-lg-6">
+	<router-outlet></router-outlet>
+</div>  

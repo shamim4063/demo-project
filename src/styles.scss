@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+@import "themes/variable";
+@import "themes/prefix";
+@import "themes/layout";
+@import "themes/input";
+@import "themes/table";
+@import "themes/button"; 
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700;800&display=swap');

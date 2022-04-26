@@ -1,5 +1,61 @@
 .right-side{
-    position: absolute;
-    top: 0;
-    right: 0; 
+    @media(min-width: 991px){ 
+        position: absolute;
+        top: 0;
+        right: 0; 
+        padding: 0 15px;
+    }
+}
+
+.accordion-inner{
+    padding: 0 16px;
+    .title{
+        color: #fff;
+        font-weight: 700;
+        font-size: 16px;
+        border-bottom: 1px solid rgba(250, 250, 250, 0.5); 
+        padding: 10px 0;
+        cursor: pointer;
+        i{
+            float: right;
+            transition: all 0.4s;
+            @media(min-width: 991px){
+                display: none;
+            }
+        }
+        &.collapsed{
+            i{
+                transform: rotate(180deg);
+            }
+        }
+    }
+    .accordion-item{
+        border: 0;
+        background: transparent;
+    }
+    .tab-list{
+        li{
+            display: block;
+            a{
+                color: #fff;
+                font-weight: 400;
+                font-size: 16px;
+                border-bottom: 1px solid rgba(250, 250, 250, 0.5); 
+                padding: 8px 18px;
+                display: block;
+                cursor: pointer;
+                &:hover, &.active{
+                    background: rgba(255, 255, 255, 0.1);
+                }
+            }
+        }
+    }
+}
+
+
+@media(max-width: 991px){
+    .right-side{
+        padding-top: 30px;
+        background: #F9F9F9;
+    }
 }

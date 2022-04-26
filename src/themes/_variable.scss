@@ -1,0 +1,20 @@
+/*font Variables*/    
+$font: 'Mulish', sans-serif;
+
+/*Color Variables*/ 
+$themeColor: #204971 ;
+$hover: #08A8FF; 
+$fontColor: #444444;  
+
+// Mixins
+@mixin transition($property: all, $duration: 300ms, $animate: linear, $delay:0s){
+    transition: $property $duration $animate $delay; 
+}
+
+// Placeholder Mixins
+@mixin placeholder {
+    &.placeholder { @content; }
+    &:-moz-placeholder { @content; }
+    &::-moz-placeholder { @content; }
+    &::-webkit-input-placeholder { @content; }
+} 
