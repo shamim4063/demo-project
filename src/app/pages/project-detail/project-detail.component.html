@@ -34,14 +34,8 @@
           </div>
         </div>
         <ul class="tab_list">
-          <li>
-            <a class="active" [routerLink]="['project-tab']">Projects</a>
-          </li>
-          <li>
-            <a [routerLink]="['sales']">Sales</a>
-          </li>
-          <li>
-            <a [routerLink]="['heating-design']">Heating Design</a>
+          <li *ngFor="let menu of projectMenus">
+            <a [ngClass]="{'active': menu.isActive}" [routerLink]="[menu.link]">{{menu.displayName}}</a>
           </li>
         </ul>
 
