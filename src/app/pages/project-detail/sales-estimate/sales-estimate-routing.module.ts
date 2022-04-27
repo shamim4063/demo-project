@@ -5,9 +5,9 @@ import { SalesEstimateComponent } from './sales-estimate.component';
 
 const routes: Routes = [{
   path: '', component: SalesEstimateComponent,
-  children:[
-    {path: '', redirectTo: 'estimate', pathMatch:'full'},
-    {path:'estimate', component: EstimateComponent}
+  children: [
+    { path: '', redirectTo: 'estimate', pathMatch: 'full' },
+    { path: 'estimate', component: EstimateComponent }
   ]
 }];
 
