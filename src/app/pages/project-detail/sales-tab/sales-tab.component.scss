@@ -91,3 +91,34 @@
         }
     }
 }
+
+
+.salse-left-details{ 
+    .title{ 
+        border-bottom:  1px solid #E8E8E8;
+        display: block;
+        padding: 10px 0;
+        h4{
+            font-weight: 600;
+            font-size: 16px;
+            color: #fff; 
+        }
+    }
+    .form-group{
+        border-bottom:  1px solid #E8E8E8;
+        display: block;
+        padding: 10px 0;
+        label{
+            font-weight: 400;
+            font-size: 14px;
+            color: #fff; 
+            display: block;
+            padding-bottom: 4px;
+        }
+        h6{
+            font-weight: 400;
+            font-size: 16px;
+            color: #fff; 
+        }
+    }
+}

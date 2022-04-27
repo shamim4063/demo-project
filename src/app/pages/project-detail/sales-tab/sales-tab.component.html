@@ -1,31 +1,49 @@
 <app-project-layout>
-  <div class="tab-item" leftTab>
-    <h5 class="title"> Slaes Detail </h5>
-    <ul class="tab-list">
-			<li>
-				<a class="active" [routerLink]="['property-address']">Property Address</a>
-			</li>
-			<li>
-				<a [routerLink]="['ber-details']">BER Details</a>
-			</li>
-			<li>
-				<a [routerLink]="['property-details']">Property Details</a>
-			</li>
-		</ul>
-  </div>
-  <ng-container rightTab>
-    <div class="page-action">
-      <div class="d-sm-flex justify-content-between">
-        <h4>Sales</h4>
-        <img src="assets/demo.png" alt="">
-      </div>
-      <ul class="tab-list">
-        <li><a href="#" class="active">Sales</a></li>
-        <li><a href="#">Customer</a></li>
-        <li><a href="#">Building</a></li>
-        <li><a href="#">QA</a></li>
-      </ul>
-    </div>
-    <router-outlet></router-outlet>
-  </ng-container>
+	<div class="tab-item" leftTab>
+		<h5 class="title"> Slaes Detail </h5>
+		<div class="salse-left-details">
+			<div class="title d-flex justify-content-between">
+				<h4>Customer Type <i class="fa-solid fa-circle-info"></i></h4> 
+			</div>
+			<div class="form-group">
+				<div class="row"> 
+					<div class="col">
+						<label>Type</label>
+						<h6>Private Customer</h6>
+					</div>
+					<div class="col">
+						<label>Type</label>
+						<h6>Private Customer</h6>
+					</div>
+				</div>
+			</div> 
+			<div class="form-group">
+				<div class="row"> 
+					<div class="col">
+						<label>Type</label>
+						<h6>Private Customer</h6>
+					</div>
+					<div class="col">
+						<label>Type</label>
+						<h6>Private Customer</h6>
+					</div>
+				</div>
+			</div> 
+		</div>
+	</div>
+	<ng-container rightTab>
+		<div class="page-action">
+			<div class="d-sm-flex justify-content-between">
+				<h4>Sales</h4>
+				<img src="assets/demo.png" alt="">
+			</div>
+			<ul class="tab-list">
+				<li><a href="#" class="active">Sales</a></li>
+				<li><a [routerLink]="['customer']">Customer</a></li>
+				<li><a href="#">Building</a></li>
+				<li><a href="#">QA</a></li>
+			</ul>
+		</div>
+		<router-outlet></router-outlet>
+	</ng-container>
 </app-project-layout>
