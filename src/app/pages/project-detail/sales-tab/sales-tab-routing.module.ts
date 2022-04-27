@@ -3,7 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { SalesTabComponent } from './sales-tab.component';
 
 const routes: Routes = [
-  {path: '', component: SalesTabComponent}
+  {
+    path: '', component: SalesTabComponent,
+    children: [
+      { path: '', redirectTo: 'project', pathMatch: 'full' },
+      { path: 'project', loadChildren: () => import('./project/project.module').then(m => m.ProjectModule) }
+    ]
+  }
 ];
 
 @NgModule({

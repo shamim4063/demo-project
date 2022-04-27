@@ -1,59 +1,59 @@
 <div class="action-area">
-	<div class="left">
-		<h4>Sales <i class="fa-solid fa-angle-down"></i></h4>
-		<span>€231,853.47 - 60 Jobs</span>
-	</div>
-	<div class="right">
-		<div class="input-group">
-			<span class="input-group-text">
-				<svg width="17" height="16" viewBox="0 0 17 16">
-					<use xlink:href="assets/sprite.svg#svg-search"></use>
-				</svg>
-			</span>
-			<input type="text" class="form-control" placeholder="Search by keyword">
-		</div>
-		<button class="theme-button">+ Add New</button>
-	</div>
+  <div class="left">
+    <h4>Sales <i class="fa-solid fa-angle-down"></i></h4>
+    <span>€231,853.47 - 60 Jobs</span>
+  </div>
+  <div class="right">
+    <div class="input-group">
+      <span class="input-group-text">
+        <svg width="17" height="16" viewBox="0 0 17 16">
+          <use xlink:href="assets/sprite.svg#svg-search"></use>
+        </svg>
+      </span>
+      <input type="text" class="form-control" placeholder="Search by keyword">
+    </div>
+    <button class="theme-button">+ Add New</button>
+  </div>
 </div>
 
 <div class="page-body">
-	<div class="row m-0">
-		<div class="col-lg-6 left-colum">
-			<div class="title">
-				<h4>1. CHS-12345-01</h4>
-				<h6>Project Value  <span>€5,287</span></h6>
-			</div>
-			<div class="left-inner">
-				<div class="d-flex media">
-					<div class="flex-shrink-0">
-						<img src="assets/home.png" alt="">
-					</div>
-					<div class="flex-grow-1 ms-3">
-						<h4>10 Deerpark Ballina Road, Crossmolina, Co Mayo.  F26 E9A0</h4>
-						<h6>Joe Blogs, +54879865656 (Site Contact Name & Details)</h6>
-					</div>
-				  </div>
-				<ul class="tab_list">
-					<li>
-						<a class="active" [routerLink]="['project-tab']">Projects</a>
-					</li>
-					<li>
-						<a [routerLink]="['sales']">Sales</a>
-					</li>
-					<li>
-						<a [routerLink]="['heating-design']">Heating Design</a>
-					</li>
-				</ul>
+  <div class="row m-0">
+    <div class="col-lg-6 left-colum">
+      <div class="title">
+        <h4>1. CHS-12345-01</h4>
+        <h6>Project Value <span>€5,287</span></h6>
+      </div>
+      <div class="left-inner">
+        <div class="d-flex media">
+          <div class="flex-shrink-0">
+            <img src="assets/home.png" alt="">
+          </div>
+          <div class="flex-grow-1 ms-3">
+            <h4>10 Deerpark Ballina Road, Crossmolina, Co Mayo. F26 E9A0</h4>
+            <h6>Joe Blogs, +54879865656 (Site Contact Name & Details)</h6>
+          </div>
+        </div>
+        <ul class="tab_list">
+          <li>
+            <a class="active" [routerLink]="['project-tab']">Projects</a>
+          </li>
+          <li>
+            <a [routerLink]="['sales']">Sales</a>
+          </li>
+          <li>
+            <a [routerLink]="['heating-design']">Heating Design</a>
+          </li>
+        </ul>
 
-			</div>
-			<div class="change-section">
+      </div>
+      <div class="change-section">
         <ul class="mobile-tab">
           <li (click)="projectDetailsService.updateStatus('timeline')"><span class="active">Timeline</span></li>
           <li (click)="projectDetailsService.updateStatus('details')"><span>Details</span></li>
         </ul>
-				<router-outlet></router-outlet>
-			</div>
-		</div>
-	</div>
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
 
 </div>
