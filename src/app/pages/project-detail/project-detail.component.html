@@ -23,7 +23,7 @@
 				<h4>1. CHS-12345-01</h4>
 				<h6>Project Value  <span>€5,287</span></h6>
 			</div>
-			<div class="left-inner">  
+			<div class="left-inner">
 				<div class="d-flex media">
 					<div class="flex-shrink-0">
 						<img src="assets/home.png" alt="">
@@ -42,14 +42,18 @@
 					</li>
 					<li>
 						<a [routerLink]="['heating-design']">Heating Design</a>
-					</li> 
+					</li>
 				</ul>
-				
+
 			</div>
 			<div class="change-section">
+        <ul class="mobile-tab">
+          <li (click)="projectDetailsService.updateStatus('timeline')"><span class="active">Timeline</span></li>
+          <li (click)="projectDetailsService.updateStatus('details')"><span>Details</span></li>
+        </ul>
 				<router-outlet></router-outlet>
 			</div>
-		</div> 
+		</div>
 	</div>
 
 </div>

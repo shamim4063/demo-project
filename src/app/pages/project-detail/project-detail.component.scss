@@ -30,7 +30,7 @@
     }
     .right{
         display: flex;
-        .input-group { 
+        .input-group {
             width: 195px;
             border-radius: 100px;
             overflow: hidden;
@@ -45,7 +45,7 @@
                 outline: none;
             }
         }
-        .theme-button{ 
+        .theme-button{
             background: #FFFFFF;
             border-radius: 100px;
             line-height: 36px;
@@ -69,7 +69,7 @@
         background: #204971;
         padding: 0;
         border-radius: 10px 10px 0 0;
-        overflow: hidden; 
+        overflow: hidden;
         min-height: 80vh;
         .title{
             display: flex;
@@ -90,7 +90,7 @@
                     padding: 0 12px;
                     font-weight: 700;
                     font-size: 16px;
-                    color: #fff; 
+                    color: #fff;
                     background: #00C17B;
                     border-radius: 14px;
                     display: inline-block;
@@ -115,7 +115,7 @@
     .tab_list{
 		padding-left: 18px;
 		padding: 0;
-		padding-top: 15px;  
+		padding-top: 15px;
 		&:first-child{
 			padding: 0;
 		}
@@ -139,6 +139,33 @@
 }
 
 
+.mobile-tab{
+  background: #fff;
+  display: flex;
+  justify-content: space-around;
+  margin: 0 -16px;
+  @media(min-width: 767px){
+      display: none;
+  }
+  li {
+      width: 100%;
+      span{
+          font-weight: 700;
+          font-size: 14px;
+          line-height: 45px;
+          text-transform: uppercase;
+          color: #204971;
+          display: block;
+          text-align: center;
+          border-bottom: 2px solid #fff;
+          &.active{
+              border-color: #204971;
+          }
+      }
+  }
+}
+
+
 @media(max-width: 991px){
     .action-area{
         padding: 15px;
@@ -150,7 +177,7 @@
 
 
 @media (max-width: 767px){
-    .action-area { 
+    .action-area {
         .left {
             span{
                 display: none;
@@ -181,6 +208,6 @@
 }
 @media (max-width: 420px){
     .action-area{
-        display: block; 
+        display: block;
     }
 }
