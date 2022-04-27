@@ -1,19 +1,21 @@
-<div class="accordion accordion-inner">
-	<div class="accordion-item"> 
-		<h5 class="title collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOne"> Project Details <i class="fa-solid fa-angle-up"></i> </h5>
-		<div id="collapseOne" class="accordion-collapse collapse"  data-bs-parent=".accordionExample"> 
-			<ul class="tab-list">
-				<li>
-					<a class="active" [routerLink]="['summary']">Summary</a>
-				</li>
-				<li>
-					<a [routerLink]="['ber-details']">BER Details</a>
-				</li>
-				<li>
-					<a [routerLink]="['building']">Building</a>
-				</li>
-			</ul>
-		</div>
+<div class="tab-inner">
+	<ul class="mobile-tab">
+		<li><span class="active" (click)="tabChange()">Timeline</span></li>
+		<li><span (click)="tabChange()">Details</span></li>
+	</ul>
+	<div class="tab-item"> 
+		<h5 class="title"> Project Details</h5>
+		<ul class="tab-list">
+			<li>
+				<a class="active" [routerLink]="['summary']">Summary</a>
+			</li>
+			<li>
+				<a [routerLink]="['ber-details']">BER Details</a>
+			</li>
+			<li>
+				<a [routerLink]="['building']">Building</a>
+			</li>
+		</ul>
 	</div>
 </div>
 <div class="right-side col-lg-6">

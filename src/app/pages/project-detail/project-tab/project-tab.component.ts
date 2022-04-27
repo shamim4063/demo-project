@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectTabComponent implements OnInit {
 
+  showDetail: boolean;
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  tabChange(){
+    this.showDetail = !this.showDetail
+  }
 }
