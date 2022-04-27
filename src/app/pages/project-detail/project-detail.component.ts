@@ -18,6 +18,8 @@ export class ProjectDetailComponent implements OnInit {
     this.projectMenus = MENUS.filter(x => !x.hidden);
   }
 
+  
+
 
 
 }

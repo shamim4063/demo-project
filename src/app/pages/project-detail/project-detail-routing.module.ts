@@ -9,6 +9,7 @@ const routes: Routes = [
       { path: '', redirectTo: 'project-tab', pathMatch: 'full' },
       { path: 'project-tab', loadChildren: () => import('./project-tab/project-tab.module').then(m => m.ProjectTabModule) },
       { path: 'sales', loadChildren: () => import('./sales-tab/sales-tab.module').then(m => m.SalesTabModule) },
+      { path: 'sales-est', loadChildren: () => import('./sales-estimate/sales-estimate.module').then(m => m.SalesEstimateModule) },
       { path: 'heating-design', loadChildren: () => import('./heating-design-tab/heating-design-tab.module').then(m => m.HeatingDesignTabModule) },
     ]
   },
