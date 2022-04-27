@@ -1,10 +1,31 @@
 <app-project-layout>
-    <div class="tab-item" leftTab>
-          <h5 class="title"> Slaes Detail </h5>
-          
+  <div class="tab-item" leftTab>
+    <h5 class="title"> Slaes Detail </h5>
+    <ul class="tab-list">
+			<li>
+				<a class="active" [routerLink]="['property-address']">Property Address</a>
+			</li>
+			<li>
+				<a [routerLink]="['ber-details']">BER Details</a>
+			</li>
+			<li>
+				<a [routerLink]="['property-details']">Property Details</a>
+			</li>
+		</ul>
+  </div>
+  <ng-container rightTab>
+    <div class="page-action">
+      <div class="d-sm-flex justify-content-between">
+        <h4>Sales</h4>
+        <img src="assets/demo.png" alt="">
       </div>
-    <ng-container rightTab>
-        
-      <router-outlet></router-outlet>
-    </ng-container>
-  </app-project-layout>
+      <ul class="tab-list">
+        <li><a href="#" class="active">Sales</a></li>
+        <li><a href="#">Customer</a></li>
+        <li><a href="#">Building</a></li>
+        <li><a href="#">QA</a></li>
+      </ul>
+    </div>
+    <router-outlet></router-outlet>
+  </ng-container>
+</app-project-layout>

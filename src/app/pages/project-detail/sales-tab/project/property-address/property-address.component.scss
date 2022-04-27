@@ -1,0 +1,93 @@
+.page-title{
+    font-weight: 700;
+    font-size: 21px;
+    color: #204971;
+    display: block;
+    text-align: center;
+    padding: 15px;
+    i{
+        color: #C0C0C0;
+        font-size: 16px;
+    }
+}
+.page-details{
+    background: #FFFFFF;
+    border-radius: 10px;
+    padding: 16px;
+    align-items: center;
+    .title{ 
+        border-bottom:  1px solid #E8E8E8;
+        display: block;
+        padding: 10px 0;
+        h4{
+            font-weight: 600;
+            font-size: 16px;
+            color: #444;
+            i{
+                color: #C0C0C0; 
+            }
+        }
+    }
+    .form-group{
+        border-bottom:  1px solid #E8E8E8;
+        display: block;
+        padding: 10px 0;
+        label{
+            font-weight: 400;
+            font-size: 14px;
+            color: #989898;
+            display: block;
+            padding-bottom: 4px;
+        }
+        h6{
+            font-weight: 400;
+            font-size: 16px;
+            color: #444;
+        }
+    }
+}
+
+.button-group{
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 30px;
+    button{ 
+        font-weight: 400;
+        font-size: 16px;
+        background: #989898;
+        border: 1px solid;
+        border-radius: 10px;
+        padding: 0 15px;
+        min-height: 40px;
+        color: #fff;
+        display: inline-block;
+        text-align: center;
+        line-height: 38px;
+        min-width: 100px;
+        outline: none;
+        box-shadow: none;
+        transition: all .3s linear;
+        border-color: #989898;
+    }
+    .theme-button{
+        background: #00C17B;
+        color: #fff;
+        border-color: #00c17b;
+        &:hover{
+            background: #00A86B;
+            color: #fff;
+            border-color: #00a86b;
+        }
+    }
+    .theme-button-2{    
+        background: transparent;
+        color: #ff647c;
+        border-color: #ff647c;
+        margin-right: 10px;
+        &:hover{
+            background: #FF647C;
+            color: #fff;
+            border-color: #ff647c;
+        }
+    }
+}
