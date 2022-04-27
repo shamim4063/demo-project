@@ -7,7 +7,8 @@ const routes: Routes = [
     path: '', component: SalesTabComponent,
     children: [
       { path: '', redirectTo: 'project', pathMatch: 'full' },
-      { path: 'project', loadChildren: () => import('./project/project.module').then(m => m.ProjectModule) }
+      { path: 'project', loadChildren: () => import('./project/project.module').then(m => m.ProjectModule) },
+      { path: 'customer', loadChildren: () => import('./customer/customer.module').then(m => m.CustomerModule) }
     ]
   }
 ];
