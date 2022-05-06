@@ -12,7 +12,7 @@ export class SalesDefaultComponent implements LeftComponentType {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.data);
+    // console.log(this.data);
   }
 
 }

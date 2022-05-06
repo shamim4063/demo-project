@@ -7,9 +7,9 @@ const routes: Routes = [
     path: '', component: ProjectDetailComponent,
     children: [
       { path: '', redirectTo: 'project-tab', pathMatch: 'full' },
-      { path: 'project-tab', loadChildren: () => import('./project-tab/project-tab.module').then(m => m.ProjectTabModule) },
-      { path: 'sales', loadChildren: () => import('./sales-tab/sales-tab.module').then(m => m.SalesTabModule) },
-      { path: 'heating-design', loadChildren: () => import('./heating-design-tab/heating-design-tab.module').then(m => m.HeatingDesignTabModule) },
+      { path: 'project-tab', loadChildren: () => import('./project-tab/project-tab.module').then(m => m.ProjectTabModule), data: { preload: true, delay: 1000 } },
+      { path: 'sales', loadChildren: () => import('./sales-tab/sales-tab.module').then(m => m.SalesTabModule), data: { preload: true, delay: 1500 } },
+      { path: 'heating-design', loadChildren: () => import('./heating-design-tab/heating-design-tab.module').then(m => m.HeatingDesignTabModule), data: { preload: true, delay: 2000 } },
     ]
   },
 ];

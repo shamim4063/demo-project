@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
-import { NavigationEnd, Router } from '@angular/router';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 import { SalesDefaultComponent } from './components/sales-default/sales-default.component';
 import { SalesEstimateComponent } from './components/sales-estimate/sales-estimate.component';
 import { LeftHostDirective } from './directives/left-host.directive';
@@ -16,43 +17,50 @@ import { LeftComponentType } from './types/left-component.interface';
 export class SalesTabComponent implements OnInit {
 
   @ViewChild(LeftHostDirective, { static: true }) adHost!: LeftHostDirective;
-  navigationSubscription: any;
+  navigationSubscription: Subscription;
 
   constructor(
-    private router: Router
+    private router: Router,
+    private route: ActivatedRoute
   ) { }
 
   ngOnInit() {
-    this.loadComponent(COMPONENTS[0]);
+    this.loadComponent();
     this.navigationSubscription = this.router.events.subscribe((e: any) => {
       if (e instanceof NavigationEnd) {
-        if (this.router.url.split('/')[5] == 'estimate') {
-          this.loadComponent(COMPONENTS[1]);
-        } else {
-          this.loadComponent(COMPONENTS[0]);
+        let childData = this.route.snapshot.firstChild.data;
+        if (childData?.parentComponent) {
+          this.loadComponent(childData.parentComponent);
         }
       }
     });
   }
 
-  loadComponent(adItem) {
+  loadComponent(selector = 'default') {
+    let loadedParent: ComponentTypes = COMPONENTS.find(c => c.selector === selector);
     const viewContainerRef = this.adHost.viewContainerRef;
     viewContainerRef.clear();
 
-    const componentRef = viewContainerRef.createComponent<LeftComponentType>(adItem.component);
-    componentRef.instance.data = adItem.data;
+    const componentRef = viewContainerRef.createComponent<LeftComponentType>(loadedParent.component);
+    componentRef.instance.data = loadedParent.data;
+  }
+
+  ngOnDestroy(){
+    this.navigationSubscription.unsubscribe();
   }
 
 }
 
 const COMPONENTS = [
   new ComponentTypes(
+    'default',
     SalesDefaultComponent,
-    { name: 'Bombasto', bio: 'Brave as they come' }
+    { name: 'Default One', title: 'Component Title' }
   ),
   new ComponentTypes(
+    'estimate',
     SalesEstimateComponent,
-    { name: 'Dr IQ', bio: 'Smart as they come' }
+    { name: 'Estimate One', title: 'Component Title' }
   )
 ]
 
