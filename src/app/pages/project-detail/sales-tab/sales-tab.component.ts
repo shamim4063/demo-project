@@ -17,8 +17,8 @@ import { LeftComponentType } from './types/left-component.interface';
 })
 export class SalesTabComponent implements OnInit {
 
-  // @ViewChild(LeftHostDirective, { static: true }) adHost!: LeftHostDirective;
-  // navigationSubscription: Subscription;
+  @ViewChild(LeftHostDirective, { static: true }) adHost!: LeftHostDirective;
+  navigationSubscription: Subscription;
 
   constructor(
     private router: Router,
@@ -31,29 +31,29 @@ export class SalesTabComponent implements OnInit {
 
     console.log(this.salesTabService.val);
 
-    // this.loadComponent();
-    // this.navigationSubscription = this.router.events.subscribe((e: any) => {
-    //   if (e instanceof NavigationEnd) {
-    //     let childData = this.route.snapshot.firstChild.data;
-    //     if (childData?.parentComponent) {
-    //       this.loadComponent(childData.parentComponent);
-    //     }
-    //   }
-    // });
+    this.loadComponent();
+    this.navigationSubscription = this.router.events.subscribe((e: any) => {
+      if (e instanceof NavigationEnd) {
+        let childData = this.route.snapshot.firstChild.data;
+        if (childData?.parentComponent) {
+          this.loadComponent(childData.parentComponent);
+        }
+      }
+    });
   }
 
-  // loadComponent(selector = 'default') {
-  //   let loadedParent: ComponentTypes = COMPONENTS.find(c => c.selector === selector);
-  //   const viewContainerRef = this.adHost.viewContainerRef;
-  //   viewContainerRef.clear();
+  loadComponent(selector = 'default') {
+    let loadedParent: ComponentTypes = COMPONENTS.find(c => c.selector === selector);
+    const viewContainerRef = this.adHost.viewContainerRef;
+    viewContainerRef.clear();
 
-  //   const componentRef = viewContainerRef.createComponent<LeftComponentType>(loadedParent.component);
-  //   componentRef.instance.data = loadedParent.data;
-  // }
+    const componentRef = viewContainerRef.createComponent<LeftComponentType>(loadedParent.component);
+    componentRef.instance.data = loadedParent.data;
+  }
 
-  // ngOnDestroy(){
-  //   this.navigationSubscription.unsubscribe();
-  // }
+  ngOnDestroy(){
+    this.navigationSubscription.unsubscribe();
+  }
 
 }
 
