@@ -7,6 +7,8 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { LeftHostDirective } from './directives/left-host.directive';
 import { SalesDefaultComponent } from './components/sales-default/sales-default.component';
 import { SalesEstimateComponent } from './components/sales-estimate/sales-estimate.component';
+import { SalesTabService } from './sales-tab.service';
+
 
 
 @NgModule({
@@ -20,6 +22,7 @@ import { SalesEstimateComponent } from './components/sales-estimate/sales-estima
     CommonModule,
     SalesTabRoutingModule,
     SharedModule
-  ]
+  ],
+  providers:[SalesTabService]
 })
 export class SalesTabModule { }

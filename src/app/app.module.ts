@@ -2,13 +2,13 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ToastrModule } from 'ngx-toastr';
-import { NgxUiLoaderModule } from 'ngx-ui-loader';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HttpErrorInterceptor } from './services/error.intercepetor';
-import { PreloaderService } from './services/pre-loader.service';
-import { SpinnerInterceptorService } from './services/spinner.intercepetor';
+import { HttpErrorInterceptor } from './app-services/error.intercepetor';
+import { PreloaderService } from './app-services/pre-loader.service';
+import { SpinnerInterceptorService } from './app-services/spinner.intercepetor';
+import { AuthorizationInterceptor } from './app-services/authorization.intercepetor';
 
 @NgModule({
   declarations: [
@@ -29,6 +29,11 @@ import { SpinnerInterceptorService } from './services/spinner.intercepetor';
     {
       provide: HTTP_INTERCEPTORS,
       useClass: SpinnerInterceptorService,
+      multi: true
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthorizationInterceptor,
       multi: true
     }
   ],
