@@ -1,9 +1,14 @@
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ToastrModule } from 'ngx-toastr';
+import { NgxUiLoaderModule } from 'ngx-ui-loader';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PreloaderService } from './pre-loader.service';
+import { HttpErrorInterceptor } from './services/error.intercepetor';
+import { PreloaderService } from './services/pre-loader.service';
+import { SpinnerInterceptorService } from './services/spinner.intercepetor';
 
 @NgModule({
   declarations: [
@@ -11,9 +16,22 @@ import { PreloaderService } from './pre-loader.service';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ToastrModule.forRoot()
   ],
-  providers: [PreloaderService],
+  providers: [
+    PreloaderService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: HttpErrorInterceptor,
+      multi: true
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: SpinnerInterceptorService,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
