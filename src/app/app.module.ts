@@ -1,4 +1,4 @@
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ToastrModule } from 'ngx-toastr';
@@ -9,6 +9,9 @@ import { AppComponent } from './app.component';
 import { HttpErrorInterceptor } from './services/error.intercepetor';
 import { PreloaderService } from './services/pre-loader.service';
 import { SpinnerInterceptorService } from './services/spinner.intercepetor';
+import { StoreModule } from '@ngrx/store';
+import {booksReducer} from './state/books.reducer';
+import {collectionReducer} from './state/collection.reducer';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,9 @@ import { SpinnerInterceptorService } from './services/spinner.intercepetor';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ToastrModule.forRoot()
+    HttpClientModule,
+    ToastrModule.forRoot(),
+    StoreModule.forRoot({ books: booksReducer, collection: collectionReducer })
   ],
   providers: [
     PreloaderService,
