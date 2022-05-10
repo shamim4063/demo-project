@@ -31,7 +31,7 @@ export class SalesTabComponent implements OnInit {
     this.loadComponent();
     this.navigationSubscription = this.router.events.subscribe((e: any) => {
       if (e instanceof NavigationEnd) {
-        let childData = this.route.snapshot.firstChild.data;
+        let childData = this.route.snapshot.firstChild?.data;
         if (childData?.parentComponent) {
           this.loadComponent(childData.parentComponent);
         }
@@ -40,15 +40,17 @@ export class SalesTabComponent implements OnInit {
   }
 
   loadComponent(selector = 'default') {
-    let loadedParent: ComponentTypes = COMPONENTS.find(c => c.selector === selector);
+    let loadedParent: ComponentTypes | undefined = COMPONENTS.find(c => c.selector === selector);
     const viewContainerRef = this.adHost.viewContainerRef;
     viewContainerRef.clear();
 
-    const componentRef = viewContainerRef.createComponent<LeftComponentType>(loadedParent.component);
-    componentRef.instance.data = loadedParent.data;
+    if (loadedParent) {
+      const componentRef = viewContainerRef.createComponent<LeftComponentType>(loadedParent.component);
+      componentRef.instance.data = loadedParent?.data;
+    }
   }
 
-  ngOnDestroy(){
+  ngOnDestroy() {
     this.navigationSubscription.unsubscribe();
   }
 

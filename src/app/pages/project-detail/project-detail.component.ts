@@ -51,7 +51,7 @@ const MENUS: Array<TabMenu> = [{
   hidden: true,
   link: 'sales-est',
   path: '/pages/project/:id/sales-est'
-}, , {
+},{
   name: 'heating-design',
   displayName: 'Heating Design',
   link: 'sales-est',
