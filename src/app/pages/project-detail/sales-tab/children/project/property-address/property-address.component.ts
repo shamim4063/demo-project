@@ -5,8 +5,6 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './property-address.component.html',
   styleUrls: ['./property-address.component.scss'],
 })
-export class PropertyAddressComponent implements OnInit {
-  constructor() {}
+export class PropertyAddressComponent {
 
-  ngOnInit(): void {}
 }

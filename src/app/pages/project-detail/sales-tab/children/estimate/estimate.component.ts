@@ -6,12 +6,4 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './estimate.component.html',
   styleUrls: ['./estimate.component.scss'],
 })
-export class EstimateComponent implements OnInit {
-  constructor(private route: ActivatedRoute) {}
-
-  ngOnInit(): void {
-    // this.route.data.subscribe(data => {
-    //   console.log("router estimatd", data);
-    // });
-  }
-}
+export class EstimateComponent {}

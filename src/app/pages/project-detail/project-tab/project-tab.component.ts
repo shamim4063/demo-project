@@ -6,8 +6,6 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   styleUrls: ['./project-tab.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
-export class ProjectTabComponent implements OnInit {
-  constructor() {}
+export class ProjectTabComponent {
 
-  ngOnInit(): void {}
 }

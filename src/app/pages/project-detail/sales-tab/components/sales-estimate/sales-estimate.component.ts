@@ -6,11 +6,7 @@ import { LeftComponentType } from '../../types/left-component.interface';
   templateUrl: './sales-estimate.component.html',
   styleUrls: ['./sales-estimate.component.scss'],
 })
-export class SalesEstimateComponent implements LeftComponentType, OnInit {
+export class SalesEstimateComponent implements LeftComponentType {
     @Input() data: any;
-    constructor() {}
 
-    ngOnInit(): void {
-      // console.log(this.data);
-    }
 }
