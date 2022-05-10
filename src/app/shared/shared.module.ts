@@ -10,7 +10,7 @@ import { BaseService } from './services/base.service';
     CommonModule,
     NgxUiLoaderModule,
   ],
-  providers: [BaseService],
+  providers: [],
   exports: [
     ProjectLayoutComponent,
     NgxUiLoaderModule

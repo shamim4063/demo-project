@@ -23,6 +23,8 @@ import { SalesTabService } from './sales-tab.service';
     SalesTabRoutingModule,
     SharedModule
   ],
-  providers:[SalesTabService]
+  providers:[
+    SalesTabService
+  ]
 })
 export class SalesTabModule { }

@@ -28,9 +28,6 @@ export class SalesTabComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-
-    console.log(this.salesTabService.val);
-
     this.loadComponent();
     this.navigationSubscription = this.router.events.subscribe((e: any) => {
       if (e instanceof NavigationEnd) {

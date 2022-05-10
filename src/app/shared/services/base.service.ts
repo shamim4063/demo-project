@@ -3,7 +3,8 @@ import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import AppConsts from 'src/app/app.const';
 
 @Injectable()
-export class BaseService {
+export abstract class BaseService {
+
 
   protected http: HttpClient;
   httpOptions: any = {};
