@@ -19,7 +19,6 @@
     "forceConsistentCasingInFileNames": true,
     "noImplicitAny": true,
     "noImplicitOverride": true,
-    "noPropertyAccessFromIndexSignature": true,
     "lib": [
       "es2018",
       "dom"
