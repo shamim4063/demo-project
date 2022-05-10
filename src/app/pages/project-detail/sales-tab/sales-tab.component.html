@@ -1,22 +1,22 @@
 <app-project-layout>
-    <div class="tab-item" leftTab>
-        <ng-template appLeftHost></ng-template>
+  <div class="tab-item" leftTab>
+    <ng-template appLeftHost></ng-template>
+  </div>
+  <ng-container rightTab>
+    <div class="page-action">
+      <div class="d-sm-flex justify-content-between">
+        <h4>Sales</h4>
+        <img src="assets/demo.png" alt="" />
+      </div>
+      <ul class="tab-list">
+        <li>
+          <a [routerLink]="['project']" class="active">Project</a>
+        </li>
+        <li><a [routerLink]="['customer']">Customer</a></li>
+        <li><a [routerLink]="['estimate']">Estimate</a></li>
+        <li><a href="#">QA</a></li>
+      </ul>
     </div>
-    <ng-container rightTab>
-        <div class="page-action">
-            <div class="d-sm-flex justify-content-between">
-                <h4>Sales</h4>
-                <img src="assets/demo.png" alt="" />
-            </div>
-            <ul class="tab-list">
-                <li>
-                    <a [routerLink]="['project']" class="active">Project</a>
-                </li>
-                <li><a [routerLink]="['customer']">Customer</a></li>
-                <li><a [routerLink]="['estimate']">Estimate</a></li>
-                <li><a href="#">QA</a></li>
-            </ul>
-        </div>
-        <router-outlet></router-outlet>
-    </ng-container>
+    <router-outlet></router-outlet>
+  </ng-container>
 </app-project-layout>

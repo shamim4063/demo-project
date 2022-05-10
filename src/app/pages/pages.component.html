@@ -1,75 +1,75 @@
 <nav class="navbar top-header">
-    <a class="navbar-brand" href="#"><img src="assets/logo.png" alt="" /></a>
-    <ul class="navbar-nav">
-        <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/']">
-                <svg
-                    width="28"
-                    height="21"
-                    viewBox="0 0 28 21"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                >
-                    <use xlink:href="assets/sprite.svg#svg-message"></use>
-                </svg>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/']">
-                <svg width="22" height="27" viewBox="0 0 22 27">
-                    <use xlink:href="assets/sprite.svg#svg-notification"></use>
-                </svg>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/']"
-                ><img src="assets/profile.png" alt=""
-            /></a>
-        </li>
-    </ul>
+  <a class="navbar-brand" href="#"><img src="assets/logo.png" alt="" /></a>
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['/']">
+        <svg
+          width="28"
+          height="21"
+          viewBox="0 0 28 21"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use xlink:href="assets/sprite.svg#svg-message"></use>
+        </svg>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['/']">
+        <svg width="22" height="27" viewBox="0 0 22 27">
+          <use xlink:href="assets/sprite.svg#svg-notification"></use>
+        </svg>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['/']"
+        ><img src="assets/profile.png" alt=""
+      /></a>
+    </li>
+  </ul>
 </nav>
 
 <header class="header-area">
-    <ul>
-        <li>
-            <a [routerLink]="['/']">
-                <svg width="25" height="24" viewBox="0 0 25 24">
-                    <use xlink:href="assets/sprite.svg#svg-home"></use>
-                </svg>
-                Home
-            </a>
-        </li>
-        <li>
-            <a [routerLink]="['/']" class="active">
-                <svg width="24" height="24" viewBox="0 0 24 24">
-                    <use xlink:href="assets/sprite.svg#svg-badge"></use>
-                </svg>
-                My Projects
-            </a>
-        </li>
-        <li>
-            <a [routerLink]="['/']">
-                <svg width="25" height="24" viewBox="0 0 25 24">
-                    <use xlink:href="assets/sprite.svg#svg-tag"></use>
-                </svg>
-                Accounts
-            </a>
-        </li>
-        <li>
-            <a [routerLink]="['/']">
-                <svg width="25" height="24" viewBox="0 0 25 24">
-                    <use xlink:href="assets/sprite.svg#svg-user"></use>
-                </svg>
-                My Profile
-            </a>
-        </li>
-    </ul>
+  <ul>
+    <li>
+      <a [routerLink]="['/']">
+        <svg width="25" height="24" viewBox="0 0 25 24">
+          <use xlink:href="assets/sprite.svg#svg-home"></use>
+        </svg>
+        Home
+      </a>
+    </li>
+    <li>
+      <a [routerLink]="['/']" class="active">
+        <svg width="24" height="24" viewBox="0 0 24 24">
+          <use xlink:href="assets/sprite.svg#svg-badge"></use>
+        </svg>
+        My Projects
+      </a>
+    </li>
+    <li>
+      <a [routerLink]="['/']">
+        <svg width="25" height="24" viewBox="0 0 25 24">
+          <use xlink:href="assets/sprite.svg#svg-tag"></use>
+        </svg>
+        Accounts
+      </a>
+    </li>
+    <li>
+      <a [routerLink]="['/']">
+        <svg width="25" height="24" viewBox="0 0 25 24">
+          <use xlink:href="assets/sprite.svg#svg-user"></use>
+        </svg>
+        My Profile
+      </a>
+    </li>
+  </ul>
 </header>
 
 <div>
-    <ngx-ui-loader
-        [overlayColor]="'rgba(41,147,201,0.16)'"
-        [fgsType]="'three-strings'"
-    ></ngx-ui-loader>
-    <router-outlet></router-outlet>
+  <ngx-ui-loader
+    [overlayColor]="'rgba(41,147,201,0.16)'"
+    [fgsType]="'three-strings'"
+  ></ngx-ui-loader>
+  <router-outlet></router-outlet>
 </div>

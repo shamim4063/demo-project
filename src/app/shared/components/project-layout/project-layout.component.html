@@ -1,12 +1,12 @@
 <div
-    class="tab-inner d-lg-block"
-    [ngClass]="{ 'd-none': status !== 'timeline' }"
+  class="tab-inner d-lg-block"
+  [ngClass]="{ 'd-none': status !== 'timeline' }"
 >
-    <ng-content select="[leftTab]"></ng-content>
+  <ng-content select="[leftTab]"></ng-content>
 </div>
 <div
-    class="right-side col-lg-6 d-lg-block"
-    [ngClass]="{ 'd-none': status !== 'details' }"
+  class="right-side col-lg-6 d-lg-block"
+  [ngClass]="{ 'd-none': status !== 'details' }"
 >
-    <ng-content select="[rightTab]"></ng-content>
+  <ng-content select="[rightTab]"></ng-content>
 </div>
