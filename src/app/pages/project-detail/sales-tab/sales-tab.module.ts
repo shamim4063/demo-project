@@ -9,22 +9,14 @@ import { SalesDefaultComponent } from './components/sales-default/sales-default.
 import { SalesEstimateComponent } from './components/sales-estimate/sales-estimate.component';
 import { SalesTabService } from './sales-tab.service';
 
-
-
 @NgModule({
-  declarations: [
-    SalesTabComponent,
-    LeftHostDirective,
-    SalesDefaultComponent,
-    SalesEstimateComponent
-  ],
-  imports: [
-    CommonModule,
-    SalesTabRoutingModule,
-    SharedModule
-  ],
-  providers:[
-    SalesTabService
-  ]
+    declarations: [
+        SalesTabComponent,
+        LeftHostDirective,
+        SalesDefaultComponent,
+        SalesEstimateComponent,
+    ],
+    imports: [CommonModule, SalesTabRoutingModule, SharedModule],
+    providers: [SalesTabService],
 })
-export class SalesTabModule { }
+export class SalesTabModule {}

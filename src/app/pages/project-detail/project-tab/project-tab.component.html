@@ -1,19 +1,19 @@
 <app-project-layout>
-  <div class="tab-item" leftTab>
-		<h5 class="title"> Project Details</h5>
-		<ul class="tab-list">
-			<li>
-				<a class="active" [routerLink]="['summary']">Summary</a>
-			</li>
-			<li>
-				<a [routerLink]="['ber-details']">BER Details</a>
-			</li>
-			<li>
-				<a [routerLink]="['building']">Building</a>
-			</li>
-		</ul>
-	</div>
-  <ng-container rightTab>
-    <router-outlet></router-outlet>
-  </ng-container>
+    <div class="tab-item" leftTab>
+        <h5 class="title">Project Details</h5>
+        <ul class="tab-list">
+            <li>
+                <a class="active" [routerLink]="['summary']">Summary</a>
+            </li>
+            <li>
+                <a [routerLink]="['ber-details']">BER Details</a>
+            </li>
+            <li>
+                <a [routerLink]="['building']">Building</a>
+            </li>
+        </ul>
+    </div>
+    <ng-container rightTab>
+        <router-outlet></router-outlet>
+    </ng-container>
 </app-project-layout>

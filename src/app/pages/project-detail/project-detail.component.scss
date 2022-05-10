@@ -1,24 +1,24 @@
-.action-area{
+.action-area {
     padding: 18px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     overflow: hidden;
-    .left{
+    .left {
         display: flex;
-        h4{
+        h4 {
             font-weight: 700;
             font-size: 21px;
             color: #444;
             line-height: 36px;
             padding-right: 15px;
-            i{
+            i {
                 font-size: 12px;
                 margin-left: 10px;
             }
         }
-        span{
-            background: #FFFFFF;
+        span {
+            background: #ffffff;
             border-radius: 10px;
             line-height: 36px;
             color: #767676;
@@ -28,25 +28,25 @@
             padding: 0 12px;
         }
     }
-    .right{
+    .right {
         display: flex;
         .input-group {
             width: 195px;
             border-radius: 100px;
             overflow: hidden;
-            .input-group-text{
+            .input-group-text {
                 background: #fff;
                 border: 0;
             }
-            .form-control{
+            .form-control {
                 border: 0;
                 padding: 0;
                 box-shadow: none;
                 outline: none;
             }
         }
-        .theme-button{
-            background: #FFFFFF;
+        .theme-button {
+            background: #ffffff;
             border-radius: 100px;
             line-height: 36px;
             color: #444;
@@ -60,38 +60,38 @@
         }
     }
 }
-.page-body{
+.page-body {
     display: block;
     overflow: hidden;
     position: relative;
     padding: 0 30px;
-    .left-colum{
+    .left-colum {
         background: #204971;
         padding: 0;
         border-radius: 10px 10px 0 0;
         overflow: hidden;
         min-height: 80vh;
-        .title{
+        .title {
             display: flex;
             justify-content: space-between;
-            background: #16426D;
+            background: #16426d;
             padding: 16px;
-            h4{
+            h4 {
                 font-weight: 700;
                 font-size: 21px;
                 color: #fff;
             }
-            h6{
+            h6 {
                 color: #fff;
                 font-weight: 400;
                 font-size: 14px;
-                span{
+                span {
                     line-height: 26px;
                     padding: 0 12px;
                     font-weight: 700;
                     font-size: 16px;
                     color: #fff;
-                    background: #00C17B;
+                    background: #00c17b;
                     border-radius: 14px;
                     display: inline-block;
                     margin-left: 15px;
@@ -100,114 +100,112 @@
         }
     }
 }
-.left-inner{
+.left-inner {
     padding: 15px;
     padding-bottom: 0;
-    .media{
-        h4{
+    .media {
+        h4 {
             color: #fff;
         }
-        h6{
+        h6 {
             color: #fff;
             padding-top: 15px;
         }
     }
-    .tab_list{
-		padding-left: 18px;
-		padding: 0;
-		padding-top: 15px;
-		&:first-child{
-			padding: 0;
-		}
-        li{
+    .tab_list {
+        padding-left: 18px;
+        padding: 0;
+        padding-top: 15px;
+        &:first-child {
+            padding: 0;
+        }
+        li {
             display: inline-block;
-            a{
+            a {
                 font-weight: 400;
-				font-size: 16px;
-				color: #fff;
-				display: inline-block;
-				padding: 0 10px;
-				line-height: 40px;
-				border-bottom: 3px solid transparent;
-				&:hover, &.active{
-					border-color: #fff;
-					background: rgba(250, 250, 250, 0.1);
-				}
+                font-size: 16px;
+                color: #fff;
+                display: inline-block;
+                padding: 0 10px;
+                line-height: 40px;
+                border-bottom: 3px solid transparent;
+                &:hover,
+                &.active {
+                    border-color: #fff;
+                    background: rgba(250, 250, 250, 0.1);
+                }
             }
         }
     }
 }
 
-
-.mobile-tab{
-  background: #fff;
-  display: flex;
-  justify-content: space-around;
-  margin: 0 -16px;
-  @media(min-width: 767px){
-      display: none;
-  }
-  li {
-      width: 100%;
-      span{
-          font-weight: 700;
-          font-size: 14px;
-          line-height: 45px;
-          text-transform: uppercase;
-          color: #204971;
-          display: block;
-          text-align: center;
-          border-bottom: 2px solid #fff;
-          &.active{
-              border-color: #204971;
-          }
-      }
-  }
+.mobile-tab {
+    background: #fff;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 -16px;
+    @media (min-width: 767px) {
+        display: none;
+    }
+    li {
+        width: 100%;
+        span {
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 45px;
+            text-transform: uppercase;
+            color: #204971;
+            display: block;
+            text-align: center;
+            border-bottom: 2px solid #fff;
+            &.active {
+                border-color: #204971;
+            }
+        }
+    }
 }
 
-
-@media(max-width: 991px){
-    .action-area{
+@media (max-width: 991px) {
+    .action-area {
         padding: 15px;
     }
-    .page-body{
-        padding:0 15px;
+    .page-body {
+        padding: 0 15px;
     }
 }
 
-
-@media (max-width: 767px){
+@media (max-width: 767px) {
     .action-area {
         .left {
-            span{
+            span {
                 display: none;
             }
-            h4{
+            h4 {
                 font-size: 14px;
                 padding: 0;
             }
         }
     }
-    .page-body .left-colum{
-        .title h4{
+    .page-body .left-colum {
+        .title h4 {
             font-size: 16px;
             line-height: 25px;
         }
     }
-    .left-inner{
-        .media{
-            h4{
+    .left-inner {
+        .media {
+            h4 {
                 font-size: 16px;
             }
-            h6{
+            h6 {
                 font-size: 10px;
                 padding-top: 5px;
             }
         }
     }
 }
-@media (max-width: 420px){
-    .action-area{
+@media (max-width: 420px) {
+    .action-area {
         display: block;
     }
 }

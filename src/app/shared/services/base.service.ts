@@ -1,36 +1,39 @@
 import { Injector, Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
+import {
+    HttpClient,
+    HttpErrorResponse,
+    HttpHeaders,
+    HttpParams,
+} from '@angular/common/http';
 import AppConsts from 'src/app/app.const';
+import { throwError } from 'rxjs';
+import { RequestOptions } from 'https';
 
 @Injectable()
 export abstract class BaseService {
+    protected http: HttpClient;
+    httpOptions;
+    params: HttpParams;
 
+    get appUrl() {
+        return AppConsts.appBaseUrl;
+    }
 
-  protected http: HttpClient;
-  httpOptions: any = {};
-  params: HttpParams;
+    get apiUrl() {
+        return AppConsts.apiBaseUrl;
+    }
 
-  get appUrl() {
-    return AppConsts.appBaseUrl;
-  }
+    get imageUrl() {
+        return AppConsts.imageBaseUrl;
+    }
 
-  get apiUrl() {
-    return AppConsts.apiBaseUrl;
-  }
-
-  get imageUrl() {
-    return AppConsts.imageBaseUrl;
-  }
-
-  constructor(injector: Injector) {
-    this.params = new HttpParams();
-    this.http = injector.get(HttpClient);
-    let header: HttpHeaders = new HttpHeaders({
-      'Content-Type': 'application/json'
-    });
-    this.httpOptions = {
-      headers: header
-    };
-  }
-
+    constructor(injector: Injector) {
+        this.params = new HttpParams();
+        this.http = injector.get(HttpClient);
+        this.httpOptions = {
+            headers: new HttpHeaders({
+                'Content-Type': 'application/json',
+            }),
+        };
+    }
 }

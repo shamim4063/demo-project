@@ -9,12 +9,15 @@ import { BerDetailsComponent } from './ber-details/ber-details.component';
 import { ProjectPhotoComponent } from './project-photo/project-photo.component';
 import { ProjectDetailsComponent } from './project-details/project-details.component';
 
-
 @NgModule({
-  declarations: [PropertyDetailsComponent, ProjectComponent, PropertyAddressComponent, BerDetailsComponent, ProjectPhotoComponent, ProjectDetailsComponent],
-  imports: [
-    CommonModule,
-    ProjectRoutingModule
-  ]
+    declarations: [
+        PropertyDetailsComponent,
+        ProjectComponent,
+        PropertyAddressComponent,
+        BerDetailsComponent,
+        ProjectPhotoComponent,
+        ProjectDetailsComponent,
+    ],
+    imports: [CommonModule, ProjectRoutingModule],
 })
-export class ProjectModule { }
+export class ProjectModule {}
