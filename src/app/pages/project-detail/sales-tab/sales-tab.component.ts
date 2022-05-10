@@ -19,7 +19,7 @@ export class SalesTabComponent implements OnInit {
 
   @ViewChild(LeftHostDirective, { static: true }) adHost!: LeftHostDirective;
   navigationSubscription: Subscription;
-
+  ok={};
   constructor(
     private router: Router,
     private route: ActivatedRoute,
