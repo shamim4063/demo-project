@@ -1,5 +1,5 @@
 {
-  "extends": "tslint:recommended",
+  "extends": ["tslint:recommended", "tslint-angular", "tslint-config-prettier"],
   "rulesDirectory": [
     "codelyzer"
   ],
@@ -136,6 +136,13 @@
     "template-no-negated-async": true,
     "use-lifecycle-interface": true,
     "use-pipe-transform-interface": true,
+    "no-conditional-assignment": true,
+    "no-sparse-arrays": true,
+    "restrict-plus-operands": true,
+    "no-invalid-template-strings": true,
+    "no-unbound-method": true,
+    "no-boolean-literal-compare": true,
+    "cyclomatic-complexity": [true, 20],
     "directive-selector": [
       true,
       "attribute",

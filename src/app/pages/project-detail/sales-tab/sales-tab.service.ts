@@ -8,4 +8,13 @@ export class SalesTabService extends BaseService{
     super(injector);
   }
 
+  sales:boolean= false;
+
+  getSalesInfo(){
+    if(this.sales == false){
+      
+    }
+    // return this.http.get<Config>(this.configUrl);
+  }
+
 }
