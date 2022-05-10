@@ -5,7 +5,7 @@ import { PasswordRecoverRoutingModule } from './password-recover-routing.module'
 import { PasswordRecoverComponent } from './password-recover.component';
 
 @NgModule({
-    declarations: [PasswordRecoverComponent],
-    imports: [CommonModule, PasswordRecoverRoutingModule],
+  declarations: [PasswordRecoverComponent],
+  imports: [CommonModule, PasswordRecoverRoutingModule],
 })
 export class PasswordRecoverModule {}

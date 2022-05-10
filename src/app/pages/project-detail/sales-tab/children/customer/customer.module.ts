@@ -7,11 +7,11 @@ import { CustomerTypeComponent } from './customer-type/customer-type.component';
 import { CustomerDetailsComponent } from './customer-details/customer-details.component';
 
 @NgModule({
-    declarations: [
-        CustomerComponent,
-        CustomerTypeComponent,
-        CustomerDetailsComponent,
-    ],
-    imports: [CommonModule, CustomerRoutingModule],
+  declarations: [
+    CustomerComponent,
+    CustomerTypeComponent,
+    CustomerDetailsComponent,
+  ],
+  imports: [CommonModule, CustomerRoutingModule],
 })
 export class CustomerModule {}

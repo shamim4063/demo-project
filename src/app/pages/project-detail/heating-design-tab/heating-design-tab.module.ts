@@ -5,7 +5,7 @@ import { HeatingDesignTabRoutingModule } from './heating-design-tab-routing.modu
 import { HeatingDesignTabComponent } from './heating-design-tab.component';
 
 @NgModule({
-    declarations: [HeatingDesignTabComponent],
-    imports: [CommonModule, HeatingDesignTabRoutingModule],
+  declarations: [HeatingDesignTabComponent],
+  imports: [CommonModule, HeatingDesignTabRoutingModule],
 })
 export class HeatingDesignTabModule {}

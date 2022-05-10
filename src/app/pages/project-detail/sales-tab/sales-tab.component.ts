@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
+import { Component, OnDestroy, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { SalesDefaultComponent } from './components/sales-default/sales-default.component';
@@ -9,15 +9,16 @@ import { ComponentTypes } from './types/component-types';
 import { LeftComponentType } from './types/left-component.interface';
 
 @Component({
-    selector: 'app-sales-tab',
-    templateUrl: './sales-tab.component.html',
-    styleUrls: ['./sales-tab.component.scss'],
-    encapsulation: ViewEncapsulation.None,
+  selector: 'app-sales-tab',
+  templateUrl: './sales-tab.component.html',
+  styleUrls: ['./sales-tab.component.scss'],
+  encapsulation: ViewEncapsulation.None,
 })
-export class SalesTabComponent implements OnInit {
+export class SalesTabComponent implements OnInit, OnDestroy {
     @ViewChild(LeftHostDirective, { static: true }) adHost!: LeftHostDirective;
     navigationSubscription: Subscription;
     ok = {};
+
     constructor(
         private router: Router,
         private route: ActivatedRoute,
@@ -25,51 +26,51 @@ export class SalesTabComponent implements OnInit {
     ) {}
 
     ngOnInit() {
-        this.loadComponent();
-        this.navigationSubscription = this.router.events.subscribe((e: any) => {
-            if (e instanceof NavigationEnd) {
-                let childData = this.route.snapshot.firstChild?.data;
-                if (childData?.parentComponent) {
-                    this.loadComponent(childData.parentComponent);
-                }
-            }
-        });
+      this.loadComponent();
+      this.navigationSubscription = this.router.events.subscribe((e: any) => {
+        if (e instanceof NavigationEnd) {
+          const childData = this.route.snapshot.firstChild?.data;
+          if (childData?.parentComponent) {
+            this.loadComponent(childData.parentComponent);
+          }
+        }
+      });
     }
 
     getSalesInfoData() {
-        this.salesTabService.get().subscribe((result) => {
-            console.log(result.data);
-        });
+      this.salesTabService.get().subscribe((result) => {
+        console.log(result.data);
+      });
     }
 
     loadComponent(selector = 'default') {
-        let loadedParent: ComponentTypes | undefined = COMPONENTS.find(
-            (c) => c.selector === selector
-        );
-        const viewContainerRef = this.adHost.viewContainerRef;
-        viewContainerRef.clear();
+      const loadedParent: ComponentTypes | undefined = COMPONENTS.find(
+        (c) => c.selector === selector
+      );
+      const viewContainerRef = this.adHost.viewContainerRef;
+      viewContainerRef.clear();
 
-        if (loadedParent) {
-            const componentRef =
+      if (loadedParent) {
+        const componentRef =
                 viewContainerRef.createComponent<LeftComponentType>(
-                    loadedParent.component
+                  loadedParent.component
                 );
-            componentRef.instance.data = loadedParent?.data;
-        }
+        componentRef.instance.data = loadedParent?.data;
+      }
     }
 
     ngOnDestroy() {
-        this.navigationSubscription.unsubscribe();
+      this.navigationSubscription.unsubscribe();
     }
 }
 
 const COMPONENTS = [
-    new ComponentTypes('default', SalesDefaultComponent, {
-        name: 'Default One',
-        title: 'Component Title',
-    }),
-    new ComponentTypes('estimate', SalesEstimateComponent, {
-        name: 'Estimate One',
-        title: 'Component Title',
-    }),
+  new ComponentTypes('default', SalesDefaultComponent, {
+    name: 'Default One',
+    title: 'Component Title',
+  }),
+  new ComponentTypes('estimate', SalesEstimateComponent, {
+    name: 'Estimate One',
+    title: 'Component Title',
+  }),
 ];

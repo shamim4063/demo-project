@@ -6,14 +6,14 @@ import { BaseService } from './services/base.service';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
-    declarations: [ProjectLayoutComponent],
-    imports: [CommonModule, FormsModule, NgxUiLoaderModule],
-    providers: [],
-    exports: [
-        CommonModule,
-        FormsModule,
-        ProjectLayoutComponent,
-        NgxUiLoaderModule,
-    ],
+  declarations: [ProjectLayoutComponent],
+  imports: [CommonModule, FormsModule, NgxUiLoaderModule],
+  providers: [],
+  exports: [
+    CommonModule,
+    FormsModule,
+    ProjectLayoutComponent,
+    NgxUiLoaderModule,
+  ],
 })
 export class SharedModule {}

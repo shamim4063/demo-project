@@ -6,20 +6,20 @@ import { ProjectTabComponent } from './project-tab.component';
 import { SummaryComponent } from './summary/summary.component';
 
 const routes: Routes = [
-    {
-        path: '',
-        component: ProjectTabComponent,
-        children: [
-            { path: '', redirectTo: 'summary', pathMatch: 'full' },
-            { path: 'summary', component: SummaryComponent },
-            { path: 'ber-details', component: BerDetailsComponent },
-            { path: 'building', component: BuildingComponent },
-        ],
-    },
+  {
+    path: '',
+    component: ProjectTabComponent,
+    children: [
+      { path: '', redirectTo: 'summary', pathMatch: 'full' },
+      { path: 'summary', component: SummaryComponent },
+      { path: 'ber-details', component: BerDetailsComponent },
+      { path: 'building', component: BuildingComponent },
+    ],
+  },
 ];
 
 @NgModule({
-    imports: [RouterModule.forChild(routes)],
-    exports: [RouterModule],
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule],
 })
 export class ProjectTabRoutingModule {}

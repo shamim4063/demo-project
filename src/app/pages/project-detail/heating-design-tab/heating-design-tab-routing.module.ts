@@ -5,7 +5,7 @@ import { HeatingDesignTabComponent } from './heating-design-tab.component';
 const routes: Routes = [{ path: '', component: HeatingDesignTabComponent }];
 
 @NgModule({
-    imports: [RouterModule.forChild(routes)],
-    exports: [RouterModule],
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule],
 })
 export class HeatingDesignTabRoutingModule {}

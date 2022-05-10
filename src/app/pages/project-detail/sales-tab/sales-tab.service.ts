@@ -7,22 +7,22 @@ import { SalesInfo } from './types/sales-info.interface';
 
 @Injectable()
 export class SalesTabService extends BaseService {
-    constructor(injector: Injector) {
-        super(injector);
-    }
+  constructor(injector: Injector) {
+    super(injector);
+  }
 
-    get(): Observable<SingleObjectOutput<SalesInfo>> {
-        return this.http.get<SingleObjectOutput<SalesInfo>>(
-            this.apiUrl + '/sales/info',
-            this.httpOptions
-        );
-    }
+  get(): Observable<SingleObjectOutput<SalesInfo>> {
+    return this.http.get<SingleObjectOutput<SalesInfo>>(
+      this.apiUrl + '/sales/info',
+      this.httpOptions
+    );
+  }
 
-    save(data: SalesInfo): Observable<SalesInfo> {
-        return this.http.post<SalesInfo>(
-            this.apiUrl + '/sales/info',
-            JSON.stringify(data),
-            this.httpOptions
-        );
-    }
+  save(data: SalesInfo): Observable<SalesInfo> {
+    return this.http.post<SalesInfo>(
+      this.apiUrl + '/sales/info',
+      JSON.stringify(data),
+      this.httpOptions
+    );
+  }
 }

@@ -9,12 +9,12 @@ import { BuildingComponent } from './building/building.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 
 @NgModule({
-    declarations: [
-        ProjectTabComponent,
-        SummaryComponent,
-        BerDetailsComponent,
-        BuildingComponent,
-    ],
-    imports: [CommonModule, ProjectTabRoutingModule, SharedModule],
+  declarations: [
+    ProjectTabComponent,
+    SummaryComponent,
+    BerDetailsComponent,
+    BuildingComponent,
+  ],
+  imports: [CommonModule, ProjectTabRoutingModule, SharedModule],
 })
 export class ProjectTabModule {}
