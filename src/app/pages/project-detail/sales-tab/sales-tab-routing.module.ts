@@ -9,11 +9,7 @@ const routes: Routes = [
     children: [
       { path: '', redirectTo: 'project', pathMatch: 'full' },
       {
-        path: 'project',
-        loadChildren: () =>
-          import('./children/project/project.module').then(
-            (m) => m.ProjectModule
-          ),
+        path: 'project', loadChildren: () =>import('./children/project/project.module').then((m) => m.ProjectModule),
         data: {
           parentComponent: 'default',
           preload: true,
