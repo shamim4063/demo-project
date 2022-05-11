@@ -14,7 +14,7 @@ const routes: Routes = [
     path: 'accounts',
     loadChildren: () =>
       import('./accounts/accounts.module').then((m) => m.AccountsModule),
-    data: { preload: true, delay: 5000 },
+    data: { preload: true, delay: 4000 },
   },
 ];
 
