@@ -118,6 +118,7 @@
         ],
         "use-isnan": "error",
         "valid-typeof": "off",
+        "@typescript-eslint/explicit-function-return-type": "off",
         "@typescript-eslint/adjacent-overload-signatures": "error",
         "@typescript-eslint/array-type": "off",
         "@typescript-eslint/ban-types": [
@@ -235,7 +236,7 @@
             "max": 80
           }
         ],
-        "linebreak-style": "off",
+        "lines-between-class-members": ["error", "always", {"exceptAfterSingleLine": true}],
         "newline-per-chained-call": "off",
         "no-extra-semi": "error",
         "no-irregular-whitespace": "off",

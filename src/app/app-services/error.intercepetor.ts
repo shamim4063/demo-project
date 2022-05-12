@@ -17,6 +17,7 @@ import { NgxUiLoaderService } from 'ngx-ui-loader';
 @Injectable()
 export class HttpErrorInterceptor implements HttpInterceptor {
   constructor(private router: Router, private toaster: ToastrService) {}
+
   intercept(
     request: HttpRequest<any>,
     next: HttpHandler
