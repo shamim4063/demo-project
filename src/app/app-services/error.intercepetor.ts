@@ -27,7 +27,7 @@ export class HttpErrorInterceptor implements HttpInterceptor {
         if (error.status === 403) {
           this.toaster.error(
             'Your session is out. Please login again',
-            'Error'
+            'Error Done'
           );
           // deleteCookie('token');
           this.router.navigateByUrl('/');
