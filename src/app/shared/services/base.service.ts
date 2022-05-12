@@ -11,12 +11,10 @@ import { RequestOptions } from 'https';
 
 @Injectable()
 export abstract class BaseService {
+
   httpOptions;
   params: HttpParams;
-
   protected http: HttpClient;
-
-  private _modifier: string;
 
   constructor(injector: Injector) {
     this.params = new HttpParams();

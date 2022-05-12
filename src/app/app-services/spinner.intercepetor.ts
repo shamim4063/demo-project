@@ -15,6 +15,7 @@ import { NgxUiLoaderService } from 'ngx-ui-loader';
 })
 export class SpinnerInterceptorService implements HttpInterceptor {
   constructor(private ngxService: NgxUiLoaderService) {}
+
   intercept(
     req: HttpRequest<any>,
     next: HttpHandler

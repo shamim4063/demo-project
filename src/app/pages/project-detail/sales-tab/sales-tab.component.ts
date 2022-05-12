@@ -16,6 +16,7 @@ import { LeftComponentType } from './types/left-component.interface';
 })
 export class SalesTabComponent implements OnInit, OnDestroy {
     @ViewChild(LeftHostDirective, { static: true }) adHost!: LeftHostDirective;
+
     navigationSubscription: Subscription;
 
     constructor(
